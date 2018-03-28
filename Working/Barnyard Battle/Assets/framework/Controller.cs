@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller : Actor {
+public class Controller : Info {
 
     public bool IsAI = false;
     public bool IsHuman = false; 
@@ -18,6 +18,11 @@ public class Controller : Actor {
     /// Player Number for Grabbing Input
     /// </summary>
     public int InputPlayerNumber = 0;
+
+    /// <summary>
+    /// Player Number in the game
+    /// </summary>
+    public int PlayerNumber = 0; 
 
     // We'll enum this later 
     public int PlayerType = 1;
@@ -51,7 +56,7 @@ public class Controller : Actor {
         return PossesedPawn; 
     }
 
-    public bool PossesPawn(Pawn p)
+    public virtual bool PossesPawn(Pawn p)
     {
         
         if (!(p.Possesed(this)))
@@ -75,7 +80,7 @@ public class Controller : Actor {
     /// </summary>
     /// <param name="PawnGameObject">Game Object with Pawn Script Attached to it</param>
     /// <returns></returns>
-    public bool PossesPawn(GameObject PawnGameObject)
+    public virtual bool PossesPawn(GameObject PawnGameObject)
     {
         Pawn p = PawnGameObject.GetComponent<Pawn>(); 
         if (!p)
@@ -86,7 +91,7 @@ public class Controller : Actor {
         return PossesPawn(p);
     }
 
-    public bool UnPossesPawn(Pawn p)
+    public virtual bool UnPossesPawn(Pawn p)
     {
         p.BecomeUnPossesed(); 
 

@@ -9,9 +9,9 @@ using UnityEngine;
 /// </summary>
 public class Game : Info {
 
-   // protected  SpawnPoint[] SpawnPointList;
-    //protected  int SpawnPointIndex = 0;
-    //public  GameObject SpawnPointPrefab;
+    protected  SpawnPoint[] SpawnPointList;
+    protected  int SpawnPointIndex = 0;
+    public  GameObject SpawnPointPrefab;
     public static Game Self;
 
     public bool UseRandomSpawnPoint = false;
@@ -57,8 +57,8 @@ public class Game : Info {
         get
         {
             // Make sure we have spawn points to work with. 
-            //if (SpawnPointList == null) { RefreshSpawnPoints(); }
-            //return SpawnPointList;
+            if (SpawnPointList == null) { RefreshSpawnPoints(); }
+            return SpawnPointList;
         }
     }
 
@@ -68,7 +68,7 @@ public class Game : Info {
     /// Initalizes Spawn points if needed. 
     /// </summary>
     /// <returns>Spawn Point Transform</returns>
-   /* public Transform GetNextSpawnPoint()
+    public Transform GetNextSpawnPoint()
     {
         // Make sure we have spawn points to work with. 
         if (SpawnPointList == null) { RefreshSpawnPoints(); }
