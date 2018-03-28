@@ -9,8 +9,6 @@ public class PWHUD : FrameworkHUD
     public int Shields = 0;
     public int Energy = 0;
 
-   
-
     public Text PlayerNumberField;
     public Text ShieldsField;
     public Slider ShieldSlider;
