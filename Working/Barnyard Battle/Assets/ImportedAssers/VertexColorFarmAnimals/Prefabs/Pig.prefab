@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33105911236239328}
   - component: {fileID: 23092161146695012}
   - component: {fileID: 95620480914910300}
-  - component: {fileID: 114915186333151118}
   - component: {fileID: 136744428357729626}
   m_Layer: 0
   m_Name: Pig
@@ -53,7 +52,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -69,7 +67,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -102,30 +99,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114915186333151118
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1055064919166404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aa4d1ab575152c49a66850738c5053e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoresDamage: 1
-  LogDamageEvents: 1
-  IsSpectator: 0
-  StartingEnergy: 100
-  StartingShields: 100
-  Energy: 100
-  Shields: 100
-  MoveSpeed: 10
-  RotateSpeed: 180
-  MinVelocity: 0.01
-  ProjectileSpawn: {fileID: 0}
-  Projectile1: {fileID: 0}
-  Projectile2: {fileID: 0}
 --- !u!136 &136744428357729626
 CapsuleCollider:
   m_ObjectHideFlags: 1
