@@ -27,7 +27,7 @@ public class PWPlayerController : PlayerController {
             return; 
         }
 
-        //PWHUD hud = HUD.GetComponent<PWHUD>(); 
+        PWHUD hud = HUD.GetComponent<PWHUD>(); 
         if (!hud)
         {
             if (!IgnoreHudError)

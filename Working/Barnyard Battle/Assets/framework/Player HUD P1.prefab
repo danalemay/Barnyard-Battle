@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 224959538516072966}
   - component: {fileID: 222340273837200952}
-  - component: {fileID: 114076873603993784}
   m_Layer: 5
   m_Name: Player HUD P1
   m_TagString: Untagged
@@ -145,30 +144,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114076873603993784
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000035588936224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c327003fd6800da4cb07d54ca21347cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoresDamage: 1
-  LogDamageEvents: 1
-  controller: {fileID: 0}
-  pawn: {fileID: 0}
-  PlayerNumber: 0
-  Shields: 0
-  Energy: 0
-  PlayerNumberField: {fileID: 114732605667753396}
-  ShieldsField: {fileID: 114096036446084166}
-  ShieldSlider: {fileID: 0}
-  EnergyField: {fileID: 114803382763254824}
-  ActivePanel: {fileID: 1809846021953522}
-  SpectatePanel: {fileID: 1610035649555144}
 --- !u!114 &114096036446084166
 MonoBehaviour:
   m_ObjectHideFlags: 1
