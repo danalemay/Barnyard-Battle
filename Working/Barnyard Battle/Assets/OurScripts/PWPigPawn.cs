@@ -38,7 +38,7 @@ public class PWPigPawn : PWPawn
         if (Shields <= 0)
         {
             controller.RequestSpectate();
-            //Destroy(gameObject);
+            Destroy(gameObject);
 
         }
 

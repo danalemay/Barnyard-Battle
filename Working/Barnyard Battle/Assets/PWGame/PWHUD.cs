@@ -36,6 +36,5 @@ public class PWHUD : FrameworkHUD
         {
             ShieldSlider.value = Shields; 
         }
-
     }
 }
