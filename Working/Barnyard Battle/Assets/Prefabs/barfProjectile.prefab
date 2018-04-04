@@ -22,7 +22,11 @@ GameObject:
   - component: {fileID: 33144768459625896}
   - component: {fileID: 135747307632867724}
   - component: {fileID: 23983342257829844}
+<<<<<<< HEAD:Working/Barnyard Battle/Assets/Prefabs/barfProjectile.prefab
   - component: {fileID: 114194854839698280}
+=======
+  - component: {fileID: 114534234818260978}
+>>>>>>> 66b404b46018613ad113a651b8cbb8141d8c61cc:Working/Barnyard Battle/Assets/Prefabs/projectial.prefab
   m_Layer: 0
   m_Name: barfProjectile
   m_TagString: Untagged
@@ -52,6 +56,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -67,6 +72,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -82,7 +88,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1162063263318386}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD:Working/Barnyard Battle/Assets/Prefabs/barfProjectile.prefab
 --- !u!114 &114194854839698280
+=======
+--- !u!114 &114534234818260978
+>>>>>>> 66b404b46018613ad113a651b8cbb8141d8c61cc:Working/Barnyard Battle/Assets/Prefabs/projectial.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
