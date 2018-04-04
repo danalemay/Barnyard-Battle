@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class PWPlayerController : PlayerController {
 
+    public List<GameObject> SpawnPrefabList;
+    int SpawnPrefabListindex = 0;
+
     public bool IgnoreHudError = false; 
     public GameObject ExitPanel;
     
@@ -52,6 +55,8 @@ public class PWPlayerController : PlayerController {
             hud.ActivePanel.SetActive(false);
             hud.SpectatePanel.SetActive(true);
             hud.PlayerNumber = (this.InputPlayerNumber + 1);
+            hud.SpawnName = SpawnPreFab.name;
+            //hud.Score = (int)pawn.Score;
 
         }
         else
@@ -119,4 +124,25 @@ public class PWPlayerController : PlayerController {
         }   
     }
 
+    public void NextSpawnPrefab()
+    {
+        SpawnPrefabListindex++;
+        if (SpawnPrefabListindex >= SpawnPrefabList.Count)
+        {
+            SpawnPrefabListindex = 0;
+        }
+
+        SpawnPreFab = SpawnPrefabList[SpawnPrefabListindex];
+    }
+
+    public void PreviousSpawnPrefab()
+    {
+        SpawnPrefabListindex--;
+        if (SpawnPrefabListindex <= -1)
+        {
+            SpawnPrefabListindex = SpawnPrefabList.Count - 1;
+        }
+
+        SpawnPreFab = SpawnPrefabList[SpawnPrefabListindex];
+    }
 }
