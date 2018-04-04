@@ -329,10 +329,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -468,7 +468,6 @@ RectTransform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1350277266}
-  - {fileID: 2093845727}
   m_Father: {fileID: 1928054892}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -679,9 +678,6 @@ MonoBehaviour:
   PlayerNumber: 0
   PlayerType: 1
   HUD: {fileID: 1159684713}
-  SpawnPrefabList:
-  - {fileID: 1054358957628840, guid: 5a31d8fa95f0a3441adefe6be8dcf2e2, type: 2}
-  - {fileID: 1626134811785768, guid: c41ffc27eabe050438b5c453d6c15c99, type: 2}
   IgnoreHudError: 0
   ExitPanel: {fileID: 0}
 --- !u!4 &466043142
@@ -952,10 +948,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1805417474995496, guid: 0f641aa7ad85ac742be57245bc255d1d, type: 2}
-      propertyPath: m_Name
-      value: SpawnPoint2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f641aa7ad85ac742be57245bc255d1d, type: 2}
   m_IsPrefabParent: 0
@@ -1090,10 +1082,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1217,7 +1209,7 @@ RectTransform:
   m_GameObject: {fileID: 935942825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 912959539}
   - {fileID: 1848256344}
@@ -1226,7 +1218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -42.6, y: 12.5}
+  m_AnchoredPosition: {x: -5.6, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &935942827
@@ -1300,13 +1292,10 @@ MonoBehaviour:
   PlayerNumber: 0
   Shields: 0
   Energy: 0
-  SpawnName: Bob
-  Lives: 0
   PlayerNumberField: {fileID: 435743058}
   ShieldsField: {fileID: 912959540}
+  ShieldSlider: {fileID: 0}
   EnergyField: {fileID: 1848256345}
-  SpawnPrefab: {fileID: 1552913084}
-  LivesText: {fileID: 0}
   ActivePanel: {fileID: 935942825}
   SpectatePanel: {fileID: 2102028986}
 --- !u!222 &1159684714
@@ -1347,7 +1336,7 @@ RectTransform:
   m_GameObject: {fileID: 1183704173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 261303926}
   - {fileID: 1236483830}
@@ -1356,7 +1345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -45, y: 19.5}
+  m_AnchoredPosition: {x: -5.6, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1183704175
@@ -1432,10 +1421,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1602,86 +1591,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4764270488290832, guid: cd45db50fade5d64d948239b78c0cbac,
     type: 2}
   m_PrefabInternal: {fileID: 525890497}
---- !u!1 &1552913082
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1207986148304508, guid: 353ead9486f321d4494e204ae61a04e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1552913083}
-  - component: {fileID: 1552913085}
-  - component: {fileID: 1552913084}
-  m_Layer: 5
-  m_Name: SpawnPrefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1552913083
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 224633126274882616, guid: 353ead9486f321d4494e204ae61a04e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1552913082}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2102028987}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.9999847, y: -40}
-  m_SizeDelta: {x: 160, y: 60}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1552913084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114616402496725480, guid: 353ead9486f321d4494e204ae61a04e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1552913082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Bob
-
-'
---- !u!222 &1552913085
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 222040595536899748, guid: 353ead9486f321d4494e204ae61a04e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1552913082}
 --- !u!1001 &1711196527
 Prefab:
   m_ObjectHideFlags: 0
@@ -1765,7 +1674,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1805417474995496, guid: 0f641aa7ad85ac742be57245bc255d1d, type: 2}
       propertyPath: m_Name
-      value: SpawnPoint1
+      value: SpawnPoint (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4834881700980282, guid: 0f641aa7ad85ac742be57245bc255d1d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1879,10 +1788,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1995,11 +1904,7 @@ MonoBehaviour:
   IsAI: 0
   IsHuman: 1
   StartWithSpectator: 1
-<<<<<<< HEAD
-  SpawnPreFab: {fileID: 1626134811785768, guid: c41ffc27eabe050438b5c453d6c15c99,
-=======
   SpawnPreFab: {fileID: 1287295899898638, guid: 9ec060093457ad84ca2733cb15c2c41e,
->>>>>>> a0be32fe210da8e9404a4fc3d9e567d480c72fc2
     type: 2}
   SpectatorPreFab: {fileID: 1938845800798876, guid: a5a1752dec7607b4aad72b8ecc23b900,
     type: 2}
@@ -2007,9 +1912,6 @@ MonoBehaviour:
   PlayerNumber: 1
   PlayerType: 2
   HUD: {fileID: 1928054891}
-  SpawnPrefabList:
-  - {fileID: 1054358957628840, guid: 5a31d8fa95f0a3441adefe6be8dcf2e2, type: 2}
-  - {fileID: 1626134811785768, guid: c41ffc27eabe050438b5c453d6c15c99, type: 2}
   IgnoreHudError: 0
   ExitPanel: {fileID: 0}
 --- !u!4 &1903756750
@@ -2061,13 +1963,10 @@ MonoBehaviour:
   PlayerNumber: 0
   Shields: 0
   Energy: 0
-  SpawnName: Bob
-  Lives: 0
   PlayerNumberField: {fileID: 191358643}
   ShieldsField: {fileID: 261303928}
+  ShieldSlider: {fileID: 0}
   EnergyField: {fileID: 1236483832}
-  SpawnPrefab: {fileID: 2093845729}
-  LivesText: {fileID: 0}
   ActivePanel: {fileID: 1183704173}
   SpectatePanel: {fileID: 355718685}
 --- !u!224 &1928054892
@@ -2100,86 +1999,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1928054890}
---- !u!1 &2093845726
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1207986148304508, guid: 353ead9486f321d4494e204ae61a04e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2093845727}
-  - component: {fileID: 2093845728}
-  - component: {fileID: 2093845729}
-  m_Layer: 5
-  m_Name: SpawnPrefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2093845727
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 224633126274882616, guid: 353ead9486f321d4494e204ae61a04e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2093845726}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 355718687}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -40}
-  m_SizeDelta: {x: 160, y: 60}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2093845728
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 222040595536899748, guid: 353ead9486f321d4494e204ae61a04e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2093845726}
---- !u!114 &2093845729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114616402496725480, guid: 353ead9486f321d4494e204ae61a04e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2093845726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Bob
-
-'
 --- !u!1 &2097253231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,7 +2060,6 @@ RectTransform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 932632193}
-  - {fileID: 1552913083}
   m_Father: {fileID: 1159684712}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
