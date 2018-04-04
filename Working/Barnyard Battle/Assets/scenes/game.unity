@@ -395,7 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAI: 0
   IsHuman: 1
-  StartWithSpectator: 0
+  StartWithSpectator: 1
   SpawnPreFab: {fileID: 1055064919166404, guid: de6abd774f85e18408346a3233418242,
     type: 2}
   SpectatorPreFab: {fileID: 1938845800798876, guid: a5a1752dec7607b4aad72b8ecc23b900,
@@ -428,6 +428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 509914202}
   - component: {fileID: 509914200}
+  - component: {fileID: 509914201}
   m_Layer: 0
   m_Name: InputPoller
   m_TagString: Untagged
@@ -446,6 +447,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f620ef429c4b509489d8984345ffe923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &509914201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509914199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8313f9a95afc7134fa84b2f6a08ad227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPointPrefab: {fileID: 1805417474995496, guid: 0f641aa7ad85ac742be57245bc255d1d,
+    type: 2}
+  UseRandomSpawnPoint: 0
 --- !u!4 &509914202
 Transform:
   m_ObjectHideFlags: 0
@@ -955,8 +970,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoresDamage: 1
   LogDamageEvents: 1
-  controller: {fileID: 0}
-  pawn: {fileID: 0}
+  controller: {fileID: 466043141}
+  pawn: {fileID: 114274496041691646, guid: de6abd774f85e18408346a3233418242, type: 2}
   PlayerNumber: 0
   Shields: 0
   Energy: 0
