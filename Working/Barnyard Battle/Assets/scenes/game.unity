@@ -664,7 +664,7 @@ MonoBehaviour:
   IsAI: 0
   IsHuman: 1
   StartWithSpectator: 1
-  SpawnPreFab: {fileID: 1054358957628840, guid: 5a31d8fa95f0a3441adefe6be8dcf2e2,
+  SpawnPreFab: {fileID: 1206511787925574, guid: 3b1e3e9155d404942bc65d9aa80120ba,
     type: 2}
   SpectatorPreFab: {fileID: 1938845800798876, guid: a5a1752dec7607b4aad72b8ecc23b900,
     type: 2}
