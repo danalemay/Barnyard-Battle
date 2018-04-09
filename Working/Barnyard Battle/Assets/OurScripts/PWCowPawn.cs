@@ -7,12 +7,8 @@ public class PWCowPawn : PWPawn{
     public float MoveSpeed = 5f;
     public float RotateSpeed = 180f;
     public float MinVelocity = .01f;
-
-    public Transform ProjectileSpawn;
-    public GameObject Projectile1;
-    public GameObject Projectile2;
-    GameObject currentProjectile;
-
+    StompAttack SA;
+    public GameObject area;
 
     public virtual void Start()
     {
@@ -21,11 +17,10 @@ public class PWCowPawn : PWPawn{
         // Add and Set up Rigid Body
         rb = gameObject.AddComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
-
+        area.SetActive(false);
 
         Energy = StartingEnergy;
         Shields = StartingShields;
-        currentProjectile = Projectile1;
 
     }
 
@@ -79,8 +74,8 @@ public class PWCowPawn : PWPawn{
     {
         if (value)
         {
-            // Fire Projectile
-            Factory(currentProjectile, ProjectileSpawn.position, ProjectileSpawn.rotation, controller);
+            area.SetActive(true);
+            //SA.NoCollision();
         }
     }
 
@@ -88,8 +83,6 @@ public class PWCowPawn : PWPawn{
     {
         if (value)
         {
-            // Set Current Projectile to Prijectile 1
-            currentProjectile = Projectile1;
         }
     }
 
@@ -97,8 +90,9 @@ public class PWCowPawn : PWPawn{
     {
         if (value)
         {
-            // Set Current Projectile to Prijectile 2
-            currentProjectile = Projectile2;
+            
         }
     }
+
+
 }

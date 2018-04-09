@@ -8,6 +8,7 @@ public class PWChickenPawn : PWPawn
     public float MoveSpeed = 20f;
     public float RotateSpeed = 180f;
     public float MinVelocity = .01f;
+    float damageAmount = 5.0f;
 
     //public Transform ProjectileSpawn;
     //public GameObject Projectile1;
@@ -80,6 +81,7 @@ public class PWChickenPawn : PWPawn
     {
         if (value)
         {
+            
             // Fire Projectile
             //Factory(currentProjectile, ProjectileSpawn.position, ProjectileSpawn.rotation, controller);
         }
@@ -100,6 +102,15 @@ public class PWChickenPawn : PWPawn
         {
             // Set Current Projectile to Prijectile 2
             //currentProjectile = Projectile2;
+        }
+    }
+
+    void OnCollisionEnter (Collision other)
+    {
+        Actor OtherActor = other.gameObject.GetComponentInParent<Actor>();
+        if (OtherActor)
+        {
+            OtherActor.TakeDamage(this, damageAmount, new DamageEventInfo(typeof(ProjectileDamageType)), Owner);
         }
     }
 }
