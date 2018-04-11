@@ -8,7 +8,7 @@ public class PWCowPawn : PWPawn{
     public float RotateSpeed = 180f;
     public float MinVelocity = .01f;
     StompAttack SA;
-    public GameObject area;
+    public Collider cow;
 
     public virtual void Start()
     {
@@ -17,10 +17,11 @@ public class PWCowPawn : PWPawn{
         // Add and Set up Rigid Body
         rb = gameObject.AddComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
-        area.SetActive(false);
 
         Energy = StartingEnergy;
         Shields = StartingShields;
+
+        SA = gameObject.AddComponent<StompAttack>(); 
 
     }
 
@@ -74,8 +75,7 @@ public class PWCowPawn : PWPawn{
     {
         if (value)
         {
-            area.SetActive(true);
-            //SA.NoCollision();
+            SA.Stomp(transform.position, 300, cow);
         }
     }
 
