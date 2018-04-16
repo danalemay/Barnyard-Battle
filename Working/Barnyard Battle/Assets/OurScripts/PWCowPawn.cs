@@ -9,6 +9,22 @@ public class PWCowPawn : PWPawn{
     public float MinVelocity = .01f;
     StompAttack SA;
     public Collider cow;
+    public float damageAmount = 10.0f;
+
+    public void Stomp(Vector3 center, float radius, Collider cow)
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+        foreach (Collider c in hitColliders)
+        {
+            Actor OtherActor = c.gameObject.GetComponentInParent<Actor>();
+
+            if (OtherActor != cow)
+            {
+                OtherActor.TakeDamage(this, damageAmount, new DamageEventInfo(typeof(ProjectileDamageType)), Owner);
+            }
+            Debug.Log("Hit");
+        }
+    }
 
     public virtual void Start()
     {
@@ -75,7 +91,8 @@ public class PWCowPawn : PWPawn{
     {
         if (value)
         {
-            SA.Stomp(transform.position, 300, cow);
+            Stomp(transform.position, 300, cow);
+            //SA.Stomp(transform.position, 300, cow);
         }
     }
 
