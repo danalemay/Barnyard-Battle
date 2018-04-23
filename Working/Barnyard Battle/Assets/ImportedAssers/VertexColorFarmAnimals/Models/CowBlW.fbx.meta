@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: e94015ff5e928744bb639410aed37c3e
+timeCreated: 1502752493
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+=======
 guid: 7f7761a315724884690f7d08af370394
 timeCreated: 1502752493
 licenseType: Store
 ModelImporter:
   serializedVersion: 22
+>>>>>>> 5d7e5b0cfc304c607775d71f1cf5e1bf653adf71
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode

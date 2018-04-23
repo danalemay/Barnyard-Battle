@@ -5,7 +5,7 @@ using UnityEngine;
 public class PWChickenPawn : PWPawn
 {
     Rigidbody rb;
-    public float MoveSpeed = 20f;
+    public float MoveSpeed = 15f;
     public float RotateSpeed = 180f;
     public float MinVelocity = .01f;
     float damageAmount = 5.0f;

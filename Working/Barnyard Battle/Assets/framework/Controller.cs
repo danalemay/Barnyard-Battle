@@ -12,6 +12,7 @@ public class Controller : Info {
     public GameObject SpawnPreFab;
     public GameObject SpectatorPreFab;
     protected GameObject SpectatorActor;
+    
     //protected Pawn SpeactatorPawn; 
     
     /// <summary>
@@ -27,25 +28,30 @@ public class Controller : Info {
     // We'll enum this later 
     public int PlayerType = 1;
 
-
+    cameraController CC;
+    public GameObject cam;
 
     protected Pawn PossesedPawn;
 
     protected virtual void Start()
     {
+        CC = cam.GetComponent<cameraController>();
         // Create Spectator Prefab
         if (SpectatorPreFab)
         {
+            CC.Set(SpectatorPreFab);
             SpectatorActor = Factory(SpectatorPreFab, Vector3.zero, new Quaternion(), this); 
         }
 
         if (StartWithSpectator)
         {
             // Grab the Spectator Prefab
+            CC.Set(SpectatorPreFab);
             RequestSpectate(); 
         }
         else
         {
+            CC.Set(SpectatorPreFab);
             //  Spawn and new Active Game Object and grab it. 
             RequestSpawn();  
         }
@@ -106,6 +112,7 @@ public class Controller : Info {
             LOG_ERROR("No Spawn Prefab Set for Spawning");
             return null;
         }
+        CC.Set(SpawnPreFab);
         return Game.Self.RequestSpawn(this, SpawnPreFab);
     }
 

@@ -140,14 +140,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7205a4fada88e0e458e5149e3e773761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IgnoresDamage: 1
+  IgnoresDamage: 0
   LogDamageEvents: 1
-  IsSpectator: 1
+  IsSpectator: 0
   StartingEnergy: 100
   StartingShields: 100
   Energy: 100
   Shields: 100
-  MoveSpeed: 20
+  MoveSpeed: 15
   RotateSpeed: 180
   MinVelocity: 0.01
 --- !u!136 &136616781638913664
