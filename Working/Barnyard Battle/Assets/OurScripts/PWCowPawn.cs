@@ -7,8 +7,9 @@ public class PWCowPawn : PWPawn{
     public float MoveSpeed = 5f;
     public float RotateSpeed = 180f;
     public float MinVelocity = .01f;
-    StompAttack SA;
+
     public Collider cow;
+    public float damageAmount = 10.0f;
 
     public virtual void Start()
     {
@@ -21,7 +22,7 @@ public class PWCowPawn : PWPawn{
         Energy = StartingEnergy;
         Shields = StartingShields;
 
-        SA = gameObject.AddComponent<StompAttack>(); 
+       // SA = gameObject.AddComponent<StompAttack>(); 
 
     }
 
@@ -75,7 +76,8 @@ public class PWCowPawn : PWPawn{
     {
         if (value)
         {
-            SA.Stomp(transform.position, 300, cow);
+            // SA.Stomp(transform.position, 300, cow);
+            Stomp(this.Location, 300, cow);
         }
     }
 
@@ -94,5 +96,25 @@ public class PWCowPawn : PWPawn{
         }
     }
 
+    public void Stomp(Vector3 center, float radius, Collider cow)
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+        foreach (Collider c in hitColliders)
+        {
+            Debug.Log("Hit : " + c.gameObject.name);
+            
+            Actor OtherActor = c.gameObject.GetComponentInParent<Actor>();
+            if (c != cow)
+            {
+                if (OtherActor)
+                {
+                    Debug.Log("Actor-TakeDamage : " + OtherActor.name);
+                    OtherActor.TakeDamage(this, damageAmount, new DamageEventInfo(typeof(ProjectileDamageType)), Owner);
+                }
+            }
+            
+        }
+
+    }
 
 }
