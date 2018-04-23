@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class persistenceTest : MonoBehaviour {
 
+    static int numberOfClicks = 69;
+
     void Awake()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("scripty");
@@ -13,5 +15,15 @@ public class persistenceTest : MonoBehaviour {
         }
 
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void Update()
+    {
+        Debug.Log(numberOfClicks);
+    }
+
+    public void teesting()
+    {
+        numberOfClicks += 1;
     }
 }
