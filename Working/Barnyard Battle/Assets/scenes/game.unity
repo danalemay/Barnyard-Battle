@@ -715,7 +715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAI: 0
-  IsHuman: 0
+  IsHuman: 1
   StartWithSpectator: 1
   SpawnPreFab: {fileID: 1600802985624000, guid: 75e69c512f8c96b44b4717c6a4847f8a,
     type: 2}
@@ -1536,20 +1536,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoresDamage: 1
   LogDamageEvents: 1
-  controller: {fileID: 0}
+  controller: {fileID: 466043141}
   pawn: {fileID: 0}
   PlayerNumber: 0
   Shields: 0
   Energy: 0
   SpawnName: Bob
   Lives: 0
-  PlayerNumberField: {fileID: 0}
-  ShieldsField: {fileID: 0}
-  EnergyField: {fileID: 0}
-  SpawnPrefab: {fileID: 0}
+  PlayerNumberField: {fileID: 435743058}
+  ShieldsField: {fileID: 912959540}
+  EnergyField: {fileID: 1848256345}
+  SpawnPrefab: {fileID: 569356486}
   LivesText: {fileID: 0}
-  ActivePanel: {fileID: 0}
-  SpectatePanel: {fileID: 0}
+  ActivePanel: {fileID: 935942825}
+  SpectatePanel: {fileID: 2102028986}
 --- !u!222 &1159684714
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2200,7 +2200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAI: 0
-  IsHuman: 0
+  IsHuman: 1
   StartWithSpectator: 1
   SpawnPreFab: {fileID: 1438047661670562, guid: 8d0c1cacf8356c749897e344681dd22b,
     type: 2}
@@ -2261,20 +2261,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoresDamage: 1
   LogDamageEvents: 1
-  controller: {fileID: 0}
+  controller: {fileID: 1903756749}
   pawn: {fileID: 0}
   PlayerNumber: 0
   Shields: 0
   Energy: 0
   SpawnName: Bob
   Lives: 0
-  PlayerNumberField: {fileID: 0}
-  ShieldsField: {fileID: 0}
-  EnergyField: {fileID: 0}
-  SpawnPrefab: {fileID: 0}
+  PlayerNumberField: {fileID: 191358643}
+  ShieldsField: {fileID: 261303928}
+  EnergyField: {fileID: 1236483832}
+  SpawnPrefab: {fileID: 529855528}
   LivesText: {fileID: 0}
-  ActivePanel: {fileID: 0}
-  SpectatePanel: {fileID: 0}
+  ActivePanel: {fileID: 1183704173}
+  SpectatePanel: {fileID: 355718685}
 --- !u!224 &1928054892
 RectTransform:
   m_ObjectHideFlags: 0
