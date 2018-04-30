@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1895177874}
-  m_IndirectSpecularColor: {r: 0.35296538, g: 0.57369477, b: 0.868658, a: 1}
+  m_IndirectSpecularColor: {r: 0.3529651, g: 0.573697, b: 0.86865836, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -264,7 +264,8 @@ MonoBehaviour:
   StartingShields: 100
   Energy: 100
   Shields: 100
-  whichCreature: 0
+  index1: 0
+  index2: 0
   CanvasObject: {fileID: 79390037}
 --- !u!114 &79390035
 MonoBehaviour:
@@ -570,7 +571,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 79390034}
-        m_MethodName: Cow
+        m_MethodName: Cow2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1499,6 +1500,7 @@ MonoBehaviour:
   IgnoreHudError: 0
   ExitPanel: {fileID: 242373547}
   canvas: {fileID: 1780343009}
+  deaths: 0
 --- !u!4 &466043142
 Transform:
   m_ObjectHideFlags: 0
@@ -2178,7 +2180,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 79390034}
-        m_MethodName: Chicken
+        m_MethodName: Chicken2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3406,7 +3408,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 79390034}
-        m_MethodName: Pig
+        m_MethodName: Pig2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4198,7 +4200,8 @@ MonoBehaviour:
   StartingShields: 100
   Energy: 100
   Shields: 100
-  whichCreature: 0
+  index1: 0
+  index2: 0
   CanvasObject: {fileID: 1780343009}
 --- !u!1001 &1794879154
 Prefab:
@@ -4507,10 +4510,11 @@ MonoBehaviour:
   SpawnPrefabList:
   - {fileID: 1438047661670562, guid: 8d0c1cacf8356c749897e344681dd22b, type: 2}
   - {fileID: 1690587580791946, guid: ff4efcd9e214fb84a9ef837d6e49791e, type: 2}
-  - {fileID: 1783906413197324, guid: 8ead5cd11256b744ebbe6a07764fb825, type: 2}
+  - {fileID: 1658038302075680, guid: f06843b3b792ef04eb6f974444100d67, type: 2}
   IgnoreHudError: 0
   ExitPanel: {fileID: 242373547}
   canvas: {fileID: 79390037}
+  deaths: 0
 --- !u!4 &1903756750
 Transform:
   m_ObjectHideFlags: 0

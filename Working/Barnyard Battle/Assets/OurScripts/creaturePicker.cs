@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CreaturePicker : PWPawn {
 
-    public int whichCreature = 0;
+    public int index1 = 0;
+    public int index2 = 0;
     public Canvas CanvasObject;
     
 
@@ -21,17 +22,32 @@ public class CreaturePicker : PWPawn {
 
     public void Chicken()
     {
-        whichCreature = 0;
+        index1 = 0;
     }
 
     public void Cow()
     {
-        whichCreature = 1;
+        index1 = 1;
     }
 
     public void Pig()
     {
-        whichCreature = 2;
+        index1 = 2;
+    }
+
+    public void Chicken2()
+    {
+        index2 = 0;
+    }
+
+    public void Cow2()
+    {
+        index2 = 1;
+    }
+
+    public void Pig2()
+    {
+        index2 = 2;
     }
 
     public void Ready() //hides canvas
@@ -50,9 +66,13 @@ public class CreaturePicker : PWPawn {
         }
     }
 
-    public int GetIndex()
+    public int GetIndex1()
     {
+        return index1;//sends picked animal to PWC
+    }
 
-        return whichCreature;//sends picked animal to PWC
+    public int GetIndex2()
+    {
+        return index2;//sends picked animal to PWC
     }
 }
