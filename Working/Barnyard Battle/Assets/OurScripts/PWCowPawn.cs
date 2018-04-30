@@ -79,7 +79,7 @@ public class PWCowPawn : PWPawn{
         if (value)
         {
             // SA.Stomp(transform.position, 300, cow);
-            Stomp(this.Location, 300, cow);
+            Stomp(this.Location, 5, cow);
         }
     }
 
