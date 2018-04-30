@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class creaturePicker : MonoBehaviour {
+public class CreaturePicker : PWPawn {
 
-    static int whichCreature = 0;
+    public int whichCreature = 0;
+    public Canvas CanvasObject;
+    
 
-    void Awake()
-    {
+    /*void Awake()
+    { 
         GameObject[] objs = GameObject.FindGameObjectsWithTag("scripty");
         if (objs.Length > 1)
         {
@@ -15,25 +17,43 @@ public class creaturePicker : MonoBehaviour {
         }
 
         DontDestroyOnLoad(this.gameObject);
+    }*/
+
+    public void Chicken()
+    {
+        whichCreature = 0;
     }
 
-    public void chicken()
+    public void Cow()
     {
         whichCreature = 1;
     }
 
-    public void cow()
+    public void Pig()
     {
         whichCreature = 2;
     }
 
-    public void pig()
+    public void Ready() //hides canvas
     {
-        whichCreature = 3;
+        //CanvasObject.GetComponent<Canvas>().enabled = true;
+        // canvas.SetActive(false);
+        //if (this.enabled == true)
+        //{
+        if(CanvasObject.name == "selection1")
+        { 
+            CanvasObject.GetComponent<Canvas>().enabled = false;
+        }
+        if (CanvasObject.name == "selection2")
+        {
+            CanvasObject.GetComponent<Canvas>().enabled = false;
+        }
     }
 
-    private void Update()
+    public int GetIndex()
     {
-        Debug.Log(whichCreature);
+        //Debug.Log(whichCreature);
+
+        return whichCreature;//sends picked animal to PWC
     }
 }

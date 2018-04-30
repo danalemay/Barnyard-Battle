@@ -11,6 +11,8 @@ public class PWCowPawn : PWPawn{
     public Collider cow;
     public float damageAmount = 10.0f;
 
+    public int deaths = 0;
+
     public virtual void Start()
     {
         IsSpectator = false;
@@ -35,7 +37,12 @@ public class PWCowPawn : PWPawn{
         {
             controller.RequestSpectate();
             Destroy(gameObject);
+            deaths++;
+        }
 
+        if (deaths > 3)
+        {
+            //add code here
         }
 
         return base.ProcessDamage(Source, Value, EventInfo, Instigator);

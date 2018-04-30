@@ -9,10 +9,12 @@ public class PWPlayerController : PlayerController {
     int SpawnPrefabListindex = 0;
 
     public bool IgnoreHudError = false; 
-    public GameObject ExitPanel;
+    public Canvas ExitPanel;
+
+    public Canvas canvas;
+    CreaturePicker CP;
     
 
-    // Use this for initialization
     protected override void Start () {
         base.Start();
         LogInputStateInfo = false; 
@@ -108,10 +110,27 @@ public class PWPlayerController : PlayerController {
 
     public override void Fire3(bool value)
     {
-        PWPawn CP = (PWPawn)PossesedPawn;
+        /*PWPawn CP = (PWPawn)PossesedPawn;
         if (CP)
         {
             CP.Fire3(value);
+        }*/
+        if (value)
+        {
+            //ExitPanel.SetActive(!ExitPanel.activeSelf);
+
+            ExitPanel.GetComponent<Canvas>().enabled = true;
+
+            /*if (ExitPanel.enabled == true)
+            {
+                Debug.Log("turn on panel");
+                ExitPanel.GetComponent<Canvas>().enabled = false;
+            }
+            else
+            {
+                Debug.Log("turn off panel");
+                ExitPanel.GetComponent<Canvas>().enabled = true;
+            }*/
         }
     }
 
@@ -119,7 +138,7 @@ public class PWPlayerController : PlayerController {
     {
         if (value)
         {
-            ExitPanel.SetActive(!ExitPanel.activeSelf);
+            //ExitPanel.SetActive(!ExitPanel.activeSelf);
         }   
     }
 
@@ -143,6 +162,17 @@ public class PWPlayerController : PlayerController {
         }
 
         SpawnPreFab = SpawnPrefabList[SpawnPrefabListindex];
+    }
+
+    public void ChangeSpawnPrefab()
+    {
+        CP = canvas.GetComponent<CreaturePicker>();
+        if (!CP)
+        {
+            Debug.Log("didnt get script");
+            return;
+        }
+        SpawnPreFab = SpawnPrefabList[CP.GetIndex()];
     }
 
 }

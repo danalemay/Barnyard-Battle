@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class ExitApplication : MonoBehaviour {
 
+    public Canvas exit;
+
+    void Start()
+    {
+        exit.GetComponent<Canvas>().enabled = false;
+    }
     public void Exit()
     {
-        Application.Quit(); 
+        exit.GetComponent<Canvas>().enabled = false;
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

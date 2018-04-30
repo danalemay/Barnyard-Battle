@@ -15,6 +15,7 @@ public class PWChickenPawn : PWPawn
     //public GameObject Projectile2;
     //GameObject currentProjectile;
 
+    public int deaths = 0;
 
     public virtual void Start()
     {
@@ -40,7 +41,12 @@ public class PWChickenPawn : PWPawn
         {
             controller.RequestSpectate();
             Destroy(gameObject);
+            deaths++;
+        }
 
+        if(deaths > 3)
+        {
+            //add code here
         }
 
         return base.ProcessDamage(Source, Value, EventInfo, Instigator);
