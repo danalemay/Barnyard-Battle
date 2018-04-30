@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class creaturePicker : PWPawn {
-
-    static int whichCreatureP1 = 0;
-    static int whichCreatureP2 = 0;
+public class CreaturePicker : PWPawn {
 
     public int whichCreature = 0;
     public Canvas CanvasObject;
@@ -25,30 +22,6 @@ public class creaturePicker : PWPawn {
     public void Chicken()
     {
         whichCreature = 0;
-    }
-
-    public void toggleP1()
-    {
-        if (whichCreatureP1 == 3)
-        {
-            whichCreatureP1 = 1;
-        }
-        else
-        {
-            whichCreatureP1 += 1;
-        }
-    }
-
-    public void toggleP2()
-    {
-        if (whichCreatureP2 == 3)
-        {
-            whichCreatureP2 = 1;
-        }
-        else
-        {
-            whichCreatureP2 += 1;
-        }
     }
 
     public void Cow()
@@ -79,19 +52,6 @@ public class creaturePicker : PWPawn {
 
     public int GetIndex()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            toggleP1();
-        }
-
-        if (Input.GetButtonDown("P2Fire1"))
-        {
-            toggleP2();
-        }
-
-        Debug.Log(whichCreatureP1);
-        Debug.Log(whichCreatureP2);
-        //Debug.Log(whichCreature);
 
         return whichCreature;//sends picked animal to PWC
     }

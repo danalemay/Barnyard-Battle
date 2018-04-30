@@ -12,7 +12,7 @@ public class PWPlayerController : PlayerController {
     public Canvas ExitPanel;
 
     public Canvas canvas;
-    creaturePicker CP;
+    CreaturePicker CP;
     
 
     protected override void Start () {
@@ -82,7 +82,11 @@ public class PWPlayerController : PlayerController {
 
     public override void Vertical(float value)
     {
-        //LOG(GetPossesedPawn().ToString()); 
+        if(value > 0)
+        {
+            toggleThroughButtons();
+        }
+
         PWPawn CP = (PWPawn)PossesedPawn;
         if (CP)
         {
@@ -166,7 +170,7 @@ public class PWPlayerController : PlayerController {
 
     public void ChangeSpawnPrefab()
     {
-        CP = canvas.GetComponent<creaturePicker>();
+        CP = canvas.GetComponent<CreaturePicker>();
         if (!CP)
         {
             Debug.Log("didnt get script");
@@ -175,4 +179,8 @@ public class PWPlayerController : PlayerController {
         SpawnPreFab = SpawnPrefabList[CP.GetIndex()];
     }
 
+    public void toggleThroughButtons()
+    {
+
+    }
 }
