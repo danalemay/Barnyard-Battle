@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class creaturePicker : MonoBehaviour {
 
-    static int whichCreature = 0;
+    static int whichCreatureP1 = 0;
+    static int whichCreatureP2 = 0;
 
     void Awake()
     {
@@ -17,23 +18,43 @@ public class creaturePicker : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void chicken()
+    public void toggleP1()
     {
-        whichCreature = 1;
+        if (whichCreatureP1 == 3)
+        {
+            whichCreatureP1 = 1;
+        }
+        else
+        {
+            whichCreatureP1 += 1;
+        }
     }
 
-    public void cow()
+    public void toggleP2()
     {
-        whichCreature = 2;
-    }
-
-    public void pig()
-    {
-        whichCreature = 3;
+        if(whichCreatureP2 == 3)
+        {
+            whichCreatureP2 = 1;
+        }
+        else
+        {
+            whichCreatureP2 += 1;
+        }
     }
 
     private void Update()
     {
-        Debug.Log(whichCreature);
+        if (Input.GetButtonDown("Fire1"))
+        {
+            toggleP1();
+        }
+
+        if (Input.GetButtonDown("P2Fire1"))
+        {
+            toggleP2();
+        }
+
+        Debug.Log(whichCreatureP1);
+        Debug.Log(whichCreatureP2);
     }
 }
