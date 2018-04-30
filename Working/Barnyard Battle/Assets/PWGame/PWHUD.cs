@@ -20,6 +20,30 @@ public class PWHUD : FrameworkHUD
     public GameObject ActivePanel;
     public GameObject SpectatePanel;
 
+    private Canvas HUD;
+    private Canvas Selection1;
+    private Canvas Selection2;
+
+    void Start()
+    {
+        HUD = GameObject.Find("HUDCanvas").GetComponent<Canvas>();
+        HUD.GetComponent<Canvas>().enabled = false;
+    }
+    void Update() //this sets the canvas to active when the selection menu is disabled
+    {
+        Selection1 = GameObject.Find("selection1").GetComponent<Canvas>();
+        Selection2 = GameObject.Find("selection2").GetComponent<Canvas>();
+
+        if (Selection1.enabled == false && Selection2.enabled == false)
+        {
+            HUD = GameObject.Find("HUDCanvas").GetComponent<Canvas>();
+
+            if (HUD.enabled == false)
+            {
+                HUD.GetComponent<Canvas>().enabled = true;
+            }
+        }
+    }
     // Update is called once per frame
     public override void UpdateHUD()
     {
