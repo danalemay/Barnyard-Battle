@@ -13,17 +13,8 @@ public class PWPlayerController : PlayerController {
     public Canvas ExitPanel;
 
     public Canvas canvas;
-<<<<<<< HEAD
-    CreaturePicker CP;
-=======
-<<<<<<< HEAD
     CreaturePicker CP;
     int deaths = 0;
-=======
-    creaturePicker CP;
->>>>>>> d73d3749e1a6b7ab2c9176f4da76c5c871ff8bc2
-    
->>>>>>> 124854194034e1d3035916ec8aadb96c6798c8a7
 
     protected override void Start () {
         base.Start();
@@ -189,11 +180,10 @@ public class PWPlayerController : PlayerController {
         SpawnPreFab = SpawnPrefabList[CP.GetIndex()];
     }
 
-<<<<<<< HEAD
     public void toggleThroughButtons()
     {
 
-=======
+    }
     public void Deaths()
     {
         deaths++;
@@ -209,6 +199,5 @@ public class PWPlayerController : PlayerController {
                 SceneManager.LoadScene("Player1Wins");
             }
         }
->>>>>>> d73d3749e1a6b7ab2c9176f4da76c5c871ff8bc2
     }
 }
