@@ -83,11 +83,6 @@ public class PWPlayerController : PlayerController {
 
     public override void Vertical(float value)
     {
-        if(value > 0)
-        {
-            toggleThroughButtons();
-        }
-
         PWPawn CP = (PWPawn)PossesedPawn;
         if (CP)
         {
@@ -180,10 +175,6 @@ public class PWPlayerController : PlayerController {
         SpawnPreFab = SpawnPrefabList[CP.GetIndex()];
     }
 
-    public void toggleThroughButtons()
-    {
-
-    }
     public void Deaths()
     {
         deaths++;

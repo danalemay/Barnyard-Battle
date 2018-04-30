@@ -44,27 +44,15 @@ public class SpectatorPawn : PWPawn {
         }
     }
 
-   /* public override void Fire1(bool value)
+   public override void Fire1(bool value)
     {
         if (value)
         {
-            /*PWPlayerController PWC = (PWPlayerController)controller;
-            if (!PWC) { return; }
-            PWC.NextSpawnPrefab();*
-
-            Selection = GameObject.Find("selection").GetComponent<Canvas>();
-
-            if (Selection.enabled == false)
-            {
-                PWPlayerController PWC = (PWPlayerController)controller;
-                if (!PWC) { return; }
-                PWC.ChangeSpawnPrefab(index);
-
-            }
+            
         }
     }
 
-     public override void Fire2(bool value)
+     /*public override void Fire2(bool value)
      {
          
             if (value)
