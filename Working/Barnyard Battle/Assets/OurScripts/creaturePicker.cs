@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreaturePicker : PWPawn {
+public class creaturePicker : PWPawn {
 
-<<<<<<< HEAD
     static int whichCreatureP1 = 0;
     static int whichCreatureP2 = 0;
-=======
+
     public int whichCreature = 0;
     public Canvas CanvasObject;
     
->>>>>>> 962d39e9ad4214493e19cf386b93f4dc729e4e86
 
     /*void Awake()
     { 
@@ -29,7 +27,6 @@ public class CreaturePicker : PWPawn {
         whichCreature = 0;
     }
 
-<<<<<<< HEAD
     public void toggleP1()
     {
         if (whichCreatureP1 == 3)
@@ -44,14 +41,16 @@ public class CreaturePicker : PWPawn {
 
     public void toggleP2()
     {
-        if(whichCreatureP2 == 3)
+        if (whichCreatureP2 == 3)
         {
             whichCreatureP2 = 1;
         }
         else
         {
             whichCreatureP2 += 1;
-=======
+        }
+    }
+
     public void Cow()
     {
         whichCreature = 1;
@@ -75,13 +74,11 @@ public class CreaturePicker : PWPawn {
         if (CanvasObject.name == "selection2")
         {
             CanvasObject.GetComponent<Canvas>().enabled = false;
->>>>>>> 962d39e9ad4214493e19cf386b93f4dc729e4e86
         }
     }
 
     public int GetIndex()
     {
-<<<<<<< HEAD
         if (Input.GetButtonDown("Fire1"))
         {
             toggleP1();
@@ -94,10 +91,8 @@ public class CreaturePicker : PWPawn {
 
         Debug.Log(whichCreatureP1);
         Debug.Log(whichCreatureP2);
-=======
         //Debug.Log(whichCreature);
 
         return whichCreature;//sends picked animal to PWC
->>>>>>> 962d39e9ad4214493e19cf386b93f4dc729e4e86
     }
 }

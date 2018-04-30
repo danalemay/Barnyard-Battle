@@ -12,7 +12,7 @@ public class PWPlayerController : PlayerController {
     public Canvas ExitPanel;
 
     public Canvas canvas;
-    CreaturePicker CP;
+    creaturePicker CP;
     
 
     protected override void Start () {
@@ -166,7 +166,7 @@ public class PWPlayerController : PlayerController {
 
     public void ChangeSpawnPrefab()
     {
-        CP = canvas.GetComponent<CreaturePicker>();
+        CP = canvas.GetComponent<creaturePicker>();
         if (!CP)
         {
             Debug.Log("didnt get script");
