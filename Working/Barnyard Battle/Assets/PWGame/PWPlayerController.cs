@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PWPlayerController : PlayerController {
 
@@ -13,7 +14,7 @@ public class PWPlayerController : PlayerController {
 
     public Canvas canvas;
     CreaturePicker CP;
-    
+    int deaths = 0;
 
     protected override void Start () {
         base.Start();
@@ -175,4 +176,20 @@ public class PWPlayerController : PlayerController {
         SpawnPreFab = SpawnPrefabList[CP.GetIndex()];
     }
 
+    public void Deaths()
+    {
+        deaths++;
+       
+        if(deaths == 1)
+        {
+            if (PlayerNumber == 0)
+            {
+                SceneManager.LoadScene("Player2Wins");
+            }
+            if (PlayerNumber == 1)
+            {
+                SceneManager.LoadScene("Player1Wins");
+            }
+        }
+    }
 }
