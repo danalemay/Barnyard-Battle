@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/CharacterSelection2.unity
     guid: ab885e575340c0e46af16da1cf8736dc
+  - enabled: 1
+    path: Assets/scenes/Player1Wins.unity
+    guid: 8da27edcccd2233409ec41ba5479b992
+  - enabled: 1
+    path: Assets/scenes/Player2Wins.unity
+    guid: 9aa9950beeea4954797b839592ded5fe

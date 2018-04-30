@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PWPlayerController : PlayerController {
 
@@ -12,8 +13,17 @@ public class PWPlayerController : PlayerController {
     public Canvas ExitPanel;
 
     public Canvas canvas;
+<<<<<<< HEAD
     CreaturePicker CP;
+=======
+<<<<<<< HEAD
+    CreaturePicker CP;
+    int deaths = 0;
+=======
+    creaturePicker CP;
+>>>>>>> d73d3749e1a6b7ab2c9176f4da76c5c871ff8bc2
     
+>>>>>>> 124854194034e1d3035916ec8aadb96c6798c8a7
 
     protected override void Start () {
         base.Start();
@@ -179,8 +189,26 @@ public class PWPlayerController : PlayerController {
         SpawnPreFab = SpawnPrefabList[CP.GetIndex()];
     }
 
+<<<<<<< HEAD
     public void toggleThroughButtons()
     {
 
+=======
+    public void Deaths()
+    {
+        deaths++;
+       
+        if(deaths == 1)
+        {
+            if (PlayerNumber == 0)
+            {
+                SceneManager.LoadScene("Player2Wins");
+            }
+            if (PlayerNumber == 1)
+            {
+                SceneManager.LoadScene("Player1Wins");
+            }
+        }
+>>>>>>> d73d3749e1a6b7ab2c9176f4da76c5c871ff8bc2
     }
 }

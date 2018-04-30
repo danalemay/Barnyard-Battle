@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpectatorPawn : PWPawn {
-    public Canvas Selection1;
-    public Canvas Selection2;
+    Canvas Selection1;
+    Canvas Selection2;
     /* void Update()
      {
          CP = canvas.GetComponent<CreaturePicker>();

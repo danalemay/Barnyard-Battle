@@ -14,8 +14,8 @@ public class PWChickenPawn : PWPawn
     //public GameObject Projectile1;
     //public GameObject Projectile2;
     //GameObject currentProjectile;
-
-    public int deaths = 0;
+    
+    PWPlayerController PWC;
 
     public virtual void Start()
     {
@@ -30,6 +30,7 @@ public class PWChickenPawn : PWPawn
         Shields = StartingShields;
         //currentProjectile = Projectile1;
 
+        PWC = (PWPlayerController)controller;
     }
 
     protected override bool ProcessDamage(Actor Source, float Value, DamageEventInfo EventInfo, Controller Instigator)
@@ -41,13 +42,13 @@ public class PWChickenPawn : PWPawn
         {
             controller.RequestSpectate();
             Destroy(gameObject);
-            deaths++;
+            PWC.Deaths();
         }
-
-        if(deaths > 3)
-        {
+        
+       // if(deaths > 3)
+        //{
             //add code here
-        }
+       // }
 
         return base.ProcessDamage(Source, Value, EventInfo, Instigator);
 

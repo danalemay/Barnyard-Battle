@@ -11,7 +11,7 @@ public class PWCowPawn : PWPawn{
     public Collider cow;
     public float damageAmount = 10.0f;
 
-    public int deaths = 0;
+    PWPlayerController PWC;
 
     public virtual void Start()
     {
@@ -24,8 +24,8 @@ public class PWCowPawn : PWPawn{
         Energy = StartingEnergy;
         Shields = StartingShields;
 
-       // SA = gameObject.AddComponent<StompAttack>(); 
-
+        // SA = gameObject.AddComponent<StompAttack>(); 
+        PWC = (PWPlayerController)controller;
     }
 
     protected override bool ProcessDamage(Actor Source, float Value, DamageEventInfo EventInfo, Controller Instigator)
@@ -37,13 +37,8 @@ public class PWCowPawn : PWPawn{
         {
             controller.RequestSpectate();
             Destroy(gameObject);
-            deaths++;
-        }
-
-        if (deaths > 3)
-        {
-            //add code here
-        }
+            PWC.Deaths();
+        } 
 
         return base.ProcessDamage(Source, Value, EventInfo, Instigator);
 
