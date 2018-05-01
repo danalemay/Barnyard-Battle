@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpectatorPawn : PWPawn {
     Canvas Selection1;
@@ -43,40 +44,41 @@ public class SpectatorPawn : PWPawn {
             controller.RequestSpawn();
         }
     }
-
-   /* public override void Fire1(bool value)
+    public override void Vertical(float value)
     {
-        if (value)
+        if (value > 0)
         {
-            /*PWPlayerController PWC = (PWPlayerController)controller;
-            if (!PWC) { return; }
-            PWC.NextSpawnPrefab();*
-
-            Selection = GameObject.Find("selection").GetComponent<Canvas>();
-
-            if (Selection.enabled == false)
+            if (controller.PlayerNumber == 0)
             {
-                PWPlayerController PWC = (PWPlayerController)controller;
-                if (!PWC) { return; }
-                PWC.ChangeSpawnPrefab(index);
-
+                Selection1.GetComponent<CreaturePicker>().ToggleWhichCreature();
+            }
+            if (controller.PlayerNumber == 1)
+            {
+                Selection2.GetComponent<CreaturePicker>().ToggleWhichCreature();
             }
         }
     }
 
-     public override void Fire2(bool value)
-     {
-         
-            if (value)
+    public override void Fire1(bool value)
+    {
+        if (value)
+        {
+            if(controller.PlayerNumber == 0)
             {
-            Selection = GameObject.Find("selection").GetComponent<Canvas>();
-
-            if (Selection.enabled == false)
-            {
-                controller.RequestSpawn();
-                }
+                Selection1.GetComponent<CreaturePicker>().Ready();
             }
-     }*/
-     
+            if(controller.PlayerNumber == 1)
+            {
+                Selection2.GetComponent<CreaturePicker>().Ready();
+            }
+        }
+    }
 
+    public override void Fire2(bool value)
+    {
+        if (value)
+        {
+            
+        }
+    }
 }
