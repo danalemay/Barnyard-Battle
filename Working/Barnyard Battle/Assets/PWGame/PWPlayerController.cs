@@ -194,11 +194,11 @@ public class PWPlayerController : PlayerController {
         {
             if (PlayerNumber == 0)
             {
-                SceneManager.LoadScene("Player1Wins");
+                SceneManager.LoadScene("Player2Wins");
             }
             if (PlayerNumber == 1)
             {
-                SceneManager.LoadScene("Player2Wins");
+                SceneManager.LoadScene("Player1Wins");
             }
         }
     }

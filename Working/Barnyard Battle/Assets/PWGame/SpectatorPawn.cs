@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SpectatorPawn : PWPawn {
 
@@ -58,41 +57,40 @@ public class SpectatorPawn : PWPawn {
             //PWC.CamOn();//calls Camera controller to make the cameras look at players
         }
     }
-    public override void Vertical(float value)
+
+   /* public override void Fire1(bool value)
     {
-        if (value > 0)
+        if (value)
         {
-            if (controller.PlayerNumber == 0)
+            /*PWPlayerController PWC = (PWPlayerController)controller;
+            if (!PWC) { return; }
+            PWC.NextSpawnPrefab();*
+
+            Selection = GameObject.Find("selection").GetComponent<Canvas>();
+
+            if (Selection.enabled == false)
             {
-                Selection1.GetComponent<CreaturePicker>().ToggleWhichCreature();
-            }
-            if (controller.PlayerNumber == 1)
-            {
-                Selection2.GetComponent<CreaturePicker>().ToggleWhichCreature();
+                PWPlayerController PWC = (PWPlayerController)controller;
+                if (!PWC) { return; }
+                PWC.ChangeSpawnPrefab(index);
+
             }
         }
     }
 
-    public override void Fire1(bool value)
-    {
-        if (value)
-        {
-            if(controller.PlayerNumber == 0)
+     public override void Fire2(bool value)
+     {
+         
+            if (value)
             {
-                Selection1.GetComponent<CreaturePicker>().Ready();
-            }
-            if(controller.PlayerNumber == 1)
-            {
-                Selection2.GetComponent<CreaturePicker>().Ready();
-            }
-        }
-    }
+            Selection = GameObject.Find("selection").GetComponent<Canvas>();
 
-    public override void Fire2(bool value)
-    {
-        if (value)
-        {
-            
-        }
-    }
+            if (Selection.enabled == false)
+            {
+                controller.RequestSpawn();
+                }
+            }
+     }*/
+     
+
 }
