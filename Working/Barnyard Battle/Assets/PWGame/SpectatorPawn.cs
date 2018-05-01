@@ -3,8 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpectatorPawn : PWPawn {
+
     Canvas Selection1;
     Canvas Selection2;
+    SwitchCameras SC;
+
+   // public GameObject switcher;
+
+
+    void Start()
+    {
+        SC = GameObject.Find("camthing").GetComponent<SwitchCameras>(); 
+        //SC.StartG();
+    }
     /* void Update()
      {
          CP = canvas.GetComponent<CreaturePicker>();
@@ -33,14 +44,17 @@ public class SpectatorPawn : PWPawn {
         if (Selection1.enabled == false && Selection2.enabled == false)
         {
             PWPlayerController PWC = (PWPlayerController)controller;
-
+            //CameraController CC = (CameraController)Pawn;
+            
             if (!PWC)
             {
                 return;
             }
-
+            SC.Switch(); //changes cameras
+           // CC.StartG();
             PWC.ChangeSpawnPrefab();
             controller.RequestSpawn();
+            //PWC.CamOn();//calls Camera controller to make the cameras look at players
         }
     }
 

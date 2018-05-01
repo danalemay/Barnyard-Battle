@@ -14,13 +14,18 @@ public class PWPlayerController : PlayerController {
 
     public Canvas canvas;
     CreaturePicker CP;
-    int deaths = 0;
+    public float deaths;
+
+    public Camera PlayerCamera;
+    CameraController CC;
 
     protected override void Start () {
         base.Start();
-        LogInputStateInfo = false; 
-       
-	}
+        LogInputStateInfo = false;
+        deaths = 3.0f;
+
+       // CC = PlayerCamera.GetComponent<CameraController>();
+    }
 
     protected override void UpdateHUD()
     {
@@ -66,8 +71,8 @@ public class PWPlayerController : PlayerController {
             hud.ActivePanel.SetActive(true);
             hud.SpectatePanel.SetActive(false);
             hud.PlayerNumber = (this.InputPlayerNumber + 1);
-            hud.Shields = (int)pawn.Shields;
-            hud.Energy = (int)pawn.Energy;
+            hud.Healths = (int)pawn.Health;
+            hud.Lives = (int)pawn.Life;
         }
         
     }
@@ -176,11 +181,16 @@ public class PWPlayerController : PlayerController {
         SpawnPreFab = SpawnPrefabList[CP.GetIndex()];
     }
 
+    public float Live()
+    {
+        return deaths;
+    }
+
     public void Deaths()
     {
-        deaths++;
-       
-        if(deaths == 1)
+        deaths--;
+
+        if (deaths == 0)
         {
             if (PlayerNumber == 0)
             {
@@ -191,5 +201,10 @@ public class PWPlayerController : PlayerController {
                 SceneManager.LoadScene("Player1Wins");
             }
         }
+    }
+
+    public void CamOn()
+    {
+       // CC.StartG();
     }
 }

@@ -25,23 +25,25 @@ public class PWPigPawn : PWPawn
         rb.constraints = RigidbodyConstraints.FreezeRotation;
 
 
-        Energy = StartingEnergy;
-        Shields = StartingShields;
+        Health = StartingHealth;
+        //Life = StartingLife;
+
         currentProjectile = Projectile1;
         PWC = (PWPlayerController)controller;
+        Life = PWC.Live();
     }
 
     protected override bool ProcessDamage(Actor Source, float Value, DamageEventInfo EventInfo, Controller Instigator)
     {
-        Shields -= Value;
-        LOG(ActorName + " HP: " + Shields);
+        Health -= Value;
+        LOG(ActorName + " HP: " + Health);
 
-        if (Shields <= 0)
+        if (Health <= 0)
         {
             controller.RequestSpectate();
             Destroy(gameObject);
             PWC.Deaths();
-        }      
+        }
 
         return base.ProcessDamage(Source, Value, EventInfo, Instigator);
 
