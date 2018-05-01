@@ -2,19 +2,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraController : MonoBehaviour {
+public class CameraController : MonoBehaviour {
 
-    GameObject player;
-    private Vector3 offset;  
+    //public Transform player;
+    //private Vector3 offset;
+    //public GameObject controller;
+   // PWPlayerController PWC;
+    Camera cam;
+    //SwitchCameras SC;
+   // int offset = 10;
 
-    public void Set(GameObject other)
+    void Start()
     {
-        player = other;
-        offset = transform.position - player.transform.position;
+        //PWC = controller.GetComponent<PWPlayerController>();
+        //player = PWC.SpectatorPreFab.transform;
+        cam.enabled = false;
     }
+
+    public void StartG()
+    {
+        //player = PWC.SpawnPreFab.transform;
+        cam.enabled = true;
+
+        //offset = transform.position - player.transform.position;
+    }
+
+    /*void Update()
+    {
+        Debug.Log("updating");
+        //transform.position = m_Player.transform.position;
+        player = PWC.SpawnPreFab.transform;
+
+        this.transform.position = new Vector3(player.transform.position.x, offset, player.transform.position.z);
+        transform.LookAt(player);
+    }
+
+    /*  void LateUpdate()
+      {
+          Debug.Log("lateupdate");
+          transform.position = player.transform.position + offset;
+      }*/
     
-    void LateUpdate()
-    {
-        transform.position = player.transform.position + offset;
-    }
+    
 }
+
+

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - scripty
+  - Cam1
+  - Cam2
   layers:
   - Default
   - TransparentFX
