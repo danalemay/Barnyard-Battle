@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PWPawn : Pawn {
+    
+    public float StartingHealth= 100.0f;
+    //public float StartingLife = ;
 
-    public float StartingEnergy = 100.0f;
-    public float StartingShields = 100.0f;
-
-    public float Energy = 100.0f;
-    public float Shields = 100.0f;
+    public float Health = 100.0f;
+    public float Life= 3.0f;
 
     public virtual void Horizontal(float value)
     {

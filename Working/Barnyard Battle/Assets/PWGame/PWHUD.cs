@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class PWHUD : FrameworkHUD
 {
     public int PlayerNumber = 0;
-    public int Shields = 0;
-    public int Energy = 0;
+    public int Healths = 0;
+   // public int Energy = 0;
     public string SpawnName = "Bob";
     public int Lives = 0;
 
     public Text PlayerNumberField;
-    public Text ShieldsField;
-    public Text EnergyField;
+    public Text HealthField;
+    //public Text EnergyField;
     public Text SpawnPrefab;
     public Text LivesText;
 
@@ -23,11 +23,13 @@ public class PWHUD : FrameworkHUD
     private Canvas HUD;
     private Canvas Selection1;
     private Canvas Selection2;
+    public Camera main;
 
     void Start()
     {
         HUD = GameObject.Find("HUDCanvas").GetComponent<Canvas>();
         HUD.GetComponent<Canvas>().enabled = false;
+        
     }
     void Update() //this sets the canvas to active when the selection menu is disabled
     {
@@ -37,6 +39,7 @@ public class PWHUD : FrameworkHUD
         if (Selection1.enabled == false && Selection2.enabled == false)
         {
             HUD = GameObject.Find("HUDCanvas").GetComponent<Canvas>();
+            
 
             if (HUD.enabled == false)
             {
@@ -51,21 +54,17 @@ public class PWHUD : FrameworkHUD
         {
             PlayerNumberField.text = "Player " + PlayerNumber;
         }
-        if (ShieldsField)
+        if (HealthField)
         {
-            ShieldsField.text = "Shields: " + Shields;
-        }
-        if (EnergyField)
-        {
-            EnergyField.text = "Energy: " + Energy;
-        }
-        if (SpawnPrefab)
-        {
-            SpawnPrefab.text = SpawnName;
+            HealthField.text = "Health: " + Healths;
         }
         if (LivesText)
         {
             LivesText.text = "Lives: " + Lives;
+        }
+        if (SpawnPrefab)
+        {
+            SpawnPrefab.text = SpawnName;
         }
     }
 }

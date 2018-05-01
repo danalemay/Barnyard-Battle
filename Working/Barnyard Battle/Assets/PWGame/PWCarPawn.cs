@@ -24,18 +24,18 @@ public class PWCarPawn : PWPawn {
         rb.constraints = RigidbodyConstraints.FreezeRotation;
         
 
-        Energy = StartingEnergy;
-        Shields = StartingShields;
+        //Energy = StartingEnergy;
+        //Shields = StartingShields;
         currentProjectile = Projectile1;
 
     }
 
     protected override bool ProcessDamage(Actor Source, float Value, DamageEventInfo EventInfo, Controller Instigator)
     {
-        Shields -= Value;
-        LOG(ActorName + " HP: " + Shields); 
+       // Shields -= Value;
+       // LOG(ActorName + " HP: " + Shields); 
 
-        if (Shields <= 0)
+      //  if (Shields <= 0)
         {
             controller.RequestSpectate();
             //Destroy(gameObject);
