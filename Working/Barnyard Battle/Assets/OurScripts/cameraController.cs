@@ -36,7 +36,6 @@ public class CameraController : MonoBehaviour {
         this.transform.position = new Vector3(player.transform.position.x, offset, player.transform.position.z);
         transform.LookAt(player);
     }
-<<<<<<< HEAD
 
     /*  void LateUpdate()
       {
@@ -48,6 +47,3 @@ public class CameraController : MonoBehaviour {
 }
 
 
-=======
-}
->>>>>>> ca4b27ae1ec3ba9635fb0202a3e65d62d1cbe4c0
