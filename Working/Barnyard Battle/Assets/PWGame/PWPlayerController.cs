@@ -14,7 +14,7 @@ public class PWPlayerController : PlayerController {
 
     public Canvas canvas;
     CreaturePicker CP;
-    public int deaths = 0;
+    int deaths = 0;
 
     protected override void Start () {
         base.Start();
@@ -83,6 +83,7 @@ public class PWPlayerController : PlayerController {
 
     public override void Vertical(float value)
     {
+        //LOG(GetPossesedPawn().ToString()); 
         PWPawn CP = (PWPawn)PossesedPawn;
         if (CP)
         {
@@ -172,21 +173,14 @@ public class PWPlayerController : PlayerController {
             Debug.Log("didnt get script");
             return;
         }
-        if (PlayerNumber == 0)
-        {
-            SpawnPreFab = SpawnPrefabList[CP.GetIndex1()];
-        }
-        if (PlayerNumber == 1)
-        {
-            SpawnPreFab = SpawnPrefabList[CP.GetIndex2()];
-        }
+        SpawnPreFab = SpawnPrefabList[CP.GetIndex()];
     }
 
     public void Deaths()
     {
         deaths++;
        
-        if(deaths > 2)
+        if(deaths == 1)
         {
             if (PlayerNumber == 0)
             {
