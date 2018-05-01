@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1895177874}
-<<<<<<< HEAD
-  m_IndirectSpecularColor: {r: 0.35287696, g: 0.5736389, b: 0.86866426, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0.35296538, g: 0.57369477, b: 0.868658, a: 1}
->>>>>>> 4f8f16dd7c6a79b04552b7a7ee8531a2d5d717fd
+  m_IndirectSpecularColor: {r: 0.35284415, g: 0.57363605, b: 0.8686633, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -268,8 +264,7 @@ MonoBehaviour:
   StartingShields: 100
   Energy: 100
   Shields: 100
-  index1: 0
-  index2: 0
+  whichCreature: 0
   CanvasObject: {fileID: 79390037}
 --- !u!114 &79390035
 MonoBehaviour:
@@ -532,7 +527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 100}
+  m_AnchoredPosition: {x: 300, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &178591818
@@ -575,7 +570,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 79390034}
-        m_MethodName: Cow2
+        m_MethodName: Cow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1504,7 +1499,6 @@ MonoBehaviour:
   IgnoreHudError: 0
   ExitPanel: {fileID: 242373547}
   canvas: {fileID: 1780343009}
-  deaths: 0
 --- !u!4 &466043142
 Transform:
   m_ObjectHideFlags: 0
@@ -2131,7 +2125,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 648309517}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2141,7 +2135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 50}
+  m_AnchoredPosition: {x: 100, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &648309519
@@ -2184,7 +2178,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 79390034}
-        m_MethodName: Chicken2
+        m_MethodName: Chicken
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2263,7 +2257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 100}
+  m_AnchoredPosition: {x: -100, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &671454579
@@ -3369,7 +3363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 0}
+  m_AnchoredPosition: {x: 100, y: -50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1495063448
@@ -3412,7 +3406,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 79390034}
-        m_MethodName: Pig2
+        m_MethodName: Pig
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3618,7 +3612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 50}
+  m_AnchoredPosition: {x: -300, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1574748825
@@ -3878,7 +3872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -50}
+  m_AnchoredPosition: {x: -100, y: -50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1734289211
@@ -4000,7 +3994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 0}
+  m_AnchoredPosition: {x: -300, y: -50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762547188
@@ -4204,8 +4198,7 @@ MonoBehaviour:
   StartingShields: 100
   Energy: 100
   Shields: 100
-  index1: 0
-  index2: 0
+  whichCreature: 0
   CanvasObject: {fileID: 1780343009}
 --- !u!1001 &1794879154
 Prefab:
@@ -4514,11 +4507,10 @@ MonoBehaviour:
   SpawnPrefabList:
   - {fileID: 1438047661670562, guid: 8d0c1cacf8356c749897e344681dd22b, type: 2}
   - {fileID: 1690587580791946, guid: ff4efcd9e214fb84a9ef837d6e49791e, type: 2}
-  - {fileID: 1658038302075680, guid: f06843b3b792ef04eb6f974444100d67, type: 2}
+  - {fileID: 1783906413197324, guid: 8ead5cd11256b744ebbe6a07764fb825, type: 2}
   IgnoreHudError: 0
   ExitPanel: {fileID: 242373547}
   canvas: {fileID: 79390037}
-  deaths: 0
 --- !u!4 &1903756750
 Transform:
   m_ObjectHideFlags: 0

@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1938845800798876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 462.46912, y: 255.32924, z: -653.7079}
+  m_LocalPosition: {x: 1.8044901, y: -0.12747717, z: -1.041648}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,5 +58,3 @@ MonoBehaviour:
   StartingShields: 100
   Energy: 100
   Shields: 100
-  Selection1: {fileID: 0}
-  Selection2: {fileID: 0}
