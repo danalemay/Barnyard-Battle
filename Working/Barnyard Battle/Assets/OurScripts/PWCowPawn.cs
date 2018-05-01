@@ -62,6 +62,7 @@ public class PWCowPawn : PWPawn{
     {
         if (value != 0)
         {
+            //LOG("Pawn-Horizontal (" + value + ")");
             gameObject.transform.Rotate(0, (RotateSpeed * value * Time.fixedDeltaTime), 0);
         }
     }
@@ -78,6 +79,7 @@ public class PWCowPawn : PWPawn{
     {
         if (value)
         {
+            // SA.Stomp(transform.position, 300, cow);
             Stomp(this.Location, 300, cow);
         }
     }

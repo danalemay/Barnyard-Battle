@@ -1,15 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CreaturePicker : PWPawn {
 
     public int whichCreature = 0;
     public Canvas CanvasObject;
-    public GameObject chickenPos;
-    public GameObject cowPos;
-    public GameObject pigPos;
+    
+
     /*void Awake()
     { 
         GameObject[] objs = GameObject.FindGameObjectsWithTag("scripty");
@@ -49,45 +47,6 @@ public class CreaturePicker : PWPawn {
         if (CanvasObject.name == "selection2")
         {
             CanvasObject.GetComponent<Canvas>().enabled = false;
-        }
-    }
-
-    public void ToggleWhichCreature()
-    {
-        if(whichCreature == 2)
-        {
-            whichCreature = 0;
-        }
-        else
-        {
-            whichCreature++;
-        }
-    }
-
-    void Update()
-    {
-        UpdateSelectorSpinner();
-    }
-
-    public void UpdateSelectorSpinner()
-    {
-        if(whichCreature == 0)
-        {
-            chickenPos.SetActive(true);
-            cowPos.SetActive(false);
-            pigPos.SetActive(false);
-        }
-        if(whichCreature == 1)
-        {
-            chickenPos.SetActive(false);
-            cowPos.SetActive(true);
-            pigPos.SetActive(false);
-        }
-        if(whichCreature == 2)
-        {
-            chickenPos.SetActive(false);
-            cowPos.SetActive(false);
-            pigPos.SetActive(true);
         }
     }
 
