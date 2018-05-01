@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SwitchCameras : MonoBehaviour {
-
-   public Camera cam1;
-   public Camera cam2;
+    
     public Camera main;
     public bool camSwitch = false;
 

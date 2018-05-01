@@ -13,7 +13,7 @@ public class SpectatorPawn : PWPawn {
 
     void Start()
     {
-        SC = GameObject.Find("camthing").GetComponent<SwitchCameras>(); 
+        SC = GameObject.Find("InputPoller").GetComponent<SwitchCameras>(); 
         //SC.StartG();
     }
     /* void Update()
