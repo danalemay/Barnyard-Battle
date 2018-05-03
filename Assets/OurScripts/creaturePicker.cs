@@ -38,10 +38,6 @@ public class CreaturePicker : PWPawn {
 
     public void Ready() //hides canvas
     {
-        //CanvasObject.GetComponent<Canvas>().enabled = true;
-        // canvas.SetActive(false);
-        //if (this.enabled == true)
-        //{
         if(CanvasObject.name == "selection1")
         { 
             CanvasObject.GetComponent<Canvas>().enabled = false;

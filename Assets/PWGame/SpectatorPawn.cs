@@ -7,8 +7,11 @@ public class SpectatorPawn : PWPawn {
     Canvas Selection1;
     Canvas Selection2;
     SwitchCameras SC;
+    int DelayCounter = 0;
+    int DelayMax = 10;
+    bool DelayOn = false;
 
-   // public GameObject switcher;
+    // public GameObject switcher;
 
 
     void Start()
@@ -38,6 +41,16 @@ public class SpectatorPawn : PWPawn {
     //private void GetPawn()
     void Update()
     {
+        if (DelayOn == true)
+        {
+            DelayCounter++;
+            if (DelayCounter >= DelayMax)
+            {
+                DelayCounter = 0;
+                DelayOn = false;
+            }
+        }
+
         Selection1 = GameObject.Find("selection1").GetComponent<Canvas>();
         Selection2 = GameObject.Find("selection2").GetComponent<Canvas>();
 
@@ -62,13 +75,18 @@ public class SpectatorPawn : PWPawn {
     {
         if (value > 0)
         {
-            if (controller.PlayerNumber == 0)
+            if (DelayOn == false)
             {
-                Selection1.GetComponent<CreaturePicker>().ToggleWhichCreature();
-            }
-            if (controller.PlayerNumber == 1)
-            {
-                Selection2.GetComponent<CreaturePicker>().ToggleWhichCreature();
+                if (controller.PlayerNumber == 0)
+                {
+                    DelayOn = true;
+                    Selection1.GetComponent<CreaturePicker>().ToggleWhichCreature();
+                }
+                if (controller.PlayerNumber == 1)
+                {
+                    DelayOn = true;
+                    Selection2.GetComponent<CreaturePicker>().ToggleWhichCreature();
+                }
             }
         }
     }
