@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 215176819}
   m_Layer: 0
   m_Name: River Valley Breakdown (1)
-  m_TagString: Untagged
+  m_TagString: scripty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
