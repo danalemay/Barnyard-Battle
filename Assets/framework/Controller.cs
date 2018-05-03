@@ -12,7 +12,7 @@ public class Controller : Info {
     public GameObject SpawnPreFab;
     public GameObject SpectatorPreFab;
     protected GameObject SpectatorActor;
-    
+    public GameObject SpawnPoint;
     //protected Pawn SpeactatorPawn; 
     
     /// <summary>
@@ -113,7 +113,7 @@ public class Controller : Info {
             return null;
         }
         //CC.Set(SpawnPreFab);
-        return Game.Self.RequestSpawn(this, SpawnPreFab);
+        return Game.Self.RequestSpawn(this, SpawnPreFab, SpawnPoint.transform);
     }
 
     public GameObject RequestSpawnAt(Transform SpawnPoint)
