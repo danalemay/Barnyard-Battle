@@ -73,7 +73,7 @@ public class SpectatorPawn : PWPawn {
 
     public override void Vertical(float value)
     {
-        if (value > 0)
+        if (value < 0)
         {
             if (DelayOn == false)
             {

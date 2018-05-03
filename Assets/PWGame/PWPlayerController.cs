@@ -114,7 +114,7 @@ public class PWPlayerController : PlayerController {
     {
         if (value)
         {
-            ExitPanel.GetComponent<Canvas>().enabled = true;
+            SceneManager.LoadScene("ExitMenu");
         }
     }
 

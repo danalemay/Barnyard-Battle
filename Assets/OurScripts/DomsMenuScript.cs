@@ -3,30 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class openCharacterSelector : PWPawn {
+public class DomsMenuScript : MonoBehaviour {
 
     int whichButton = 0;
     int DelayCounter = 0;
     int DelayMax = 10;
     bool DelayOn = false;
-    public GameObject PlayPos;
-    public GameObject InstructPos;
+    public GameObject BackToGamePos;
     public GameObject QuitPos;
-
-    public void ChangeScene(int changeTheScene)
-    {
-        SceneManager.LoadScene("game");
-    }
-
-    public void EndGame()
-    {
-        Application.Quit();
-    }
-
-    public void Controls()
-    {
-        SceneManager.LoadScene("instructions");
-    }
 
     void Update()
     {
@@ -49,10 +33,6 @@ public class openCharacterSelector : PWPawn {
             }
             if (whichButton == 1)
             {
-                SceneManager.LoadScene("instructions");
-            }
-            if (whichButton == 2)
-            {
                 Application.Quit();
             }
         }
@@ -69,7 +49,7 @@ public class openCharacterSelector : PWPawn {
     public void ToggleWhichButton()
     {
         DelayOn = true;
-        if (whichButton == 2)
+        if (whichButton == 1)
         {
             whichButton = 0;
         }
@@ -83,20 +63,12 @@ public class openCharacterSelector : PWPawn {
     {
         if (whichButton == 0)
         {
-            PlayPos.SetActive(true);
-            InstructPos.SetActive(false);
+            BackToGamePos.SetActive(true);
             QuitPos.SetActive(false);
         }
         if (whichButton == 1)
         {
-            PlayPos.SetActive(false);
-            InstructPos.SetActive(true);
-            QuitPos.SetActive(false);
-        }
-        if(whichButton == 2)
-        {
-            PlayPos.SetActive(false);
-            InstructPos.SetActive(false);
+            BackToGamePos.SetActive(false);
             QuitPos.SetActive(true);
         }
     }

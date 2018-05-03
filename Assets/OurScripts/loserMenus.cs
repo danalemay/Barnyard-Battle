@@ -9,10 +9,13 @@ public class loserMenus : MonoBehaviour {
     int DelayCounter = 0;
     int DelayMax = 10;
     bool DelayOn = false;
+    public GameObject MenuPos;
+    public GameObject PlayAgainPos;
 
     void Update()
     {
-        if(DelayOn == true)
+        UpdateSelectorSpinner();
+        if (DelayOn == true)
         {
             DelayCounter++;
             if(DelayCounter >= DelayMax)
@@ -34,14 +37,13 @@ public class loserMenus : MonoBehaviour {
             }
         }
 
-        if(Input.GetButtonDown("Vertical") || Input.GetButtonDown("P2Vertical"))
+        if ((Input.GetAxis("Vertical") < 0) || (Input.GetAxis("P2Vertical") < 0))
         {
-            if(DelayOn == false)
+            if (DelayOn == false)
             {
                 ToggleWhichButton();
-            } 
+            }
         }
-        Debug.Log(whichButton);
     }
 
     public void ToggleWhichButton()
@@ -54,6 +56,20 @@ public class loserMenus : MonoBehaviour {
         else
         {
             whichButton++;
+        }
+    }
+
+    public void UpdateSelectorSpinner()
+    {
+        if (whichButton == 0)
+        {
+            MenuPos.SetActive(true);
+            PlayAgainPos.SetActive(false);
+        }
+        if (whichButton == 1)
+        {
+            MenuPos.SetActive(false);
+            PlayAgainPos.SetActive(true);
         }
     }
 }
