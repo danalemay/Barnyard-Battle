@@ -64,7 +64,6 @@ public class PWPlayerController : PlayerController {
             hud.SpectatePanel.SetActive(true);
             hud.PlayerNumber = (this.InputPlayerNumber + 1);
             hud.SpawnName = SpawnPreFab.name;
-            //hud.Score = (int)pawn.Score;
         }
         else
         {
@@ -88,7 +87,6 @@ public class PWPlayerController : PlayerController {
 
     public override void Vertical(float value)
     {
-        //LOG(GetPossesedPawn().ToString()); 
         PWPawn CP = (PWPawn)PossesedPawn;
         if (CP)
         {
