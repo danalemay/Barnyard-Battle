@@ -14,11 +14,17 @@ public class openCharacterSelector : PWPawn {
     {
         Application.Quit();
     }
-    void Update()
+    /*void Update()
     {
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("P2Fire1"))
         {
             SceneManager.LoadScene("game");
         }
+    }*/
+
+    public void Controls()
+    {
+        SceneManager.LoadScene("instructions");
     }
+
 }
