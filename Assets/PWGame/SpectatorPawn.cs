@@ -58,22 +58,36 @@ public class SpectatorPawn : PWPawn {
         }
     }
 
-   /* public override void Fire1(bool value)
+    public override void Vertical(float value)
+    {
+        if (value > 0)
+        {
+            if (controller.PlayerNumber == 0)
+            {
+                Selection1.GetComponent<CreaturePicker>().ToggleWhichCreature();
+            }
+            if (controller.PlayerNumber == 1)
+            {
+                Selection2.GetComponent<CreaturePicker>().ToggleWhichCreature();
+            }
+        }
+    }
+
+    public override void Fire1(bool value)
     {
         if (value)
         {
-            /*PWPlayerController PWC = (PWPlayerController)controller;
-            if (!PWC) { return; }
-            PWC.NextSpawnPrefab();*
-
-            Selection = GameObject.Find("selection").GetComponent<Canvas>();
-
-            if (Selection.enabled == false)
+            if (value)
             {
-                PWPlayerController PWC = (PWPlayerController)controller;
-                if (!PWC) { return; }
-                PWC.ChangeSpawnPrefab(index);
-
+                if (controller.PlayerNumber == 0)
+                {
+                    Selection1.GetComponent<CreaturePicker>().Ready();
+                }
+                if (controller.PlayerNumber == 1)
+                {
+                    Selection2.GetComponent<CreaturePicker>().Ready();
+                }
+                
             }
         }
     }
@@ -83,14 +97,7 @@ public class SpectatorPawn : PWPawn {
          
             if (value)
             {
-            Selection = GameObject.Find("selection").GetComponent<Canvas>();
-
-            if (Selection.enabled == false)
-            {
-                controller.RequestSpawn();
-                }
+            
             }
-     }*/
-     
-
+     }
 }
