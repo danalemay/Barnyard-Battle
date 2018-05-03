@@ -23,8 +23,6 @@ public class PWPlayerController : PlayerController {
         base.Start();
         LogInputStateInfo = false;
         deaths = 3.0f;
-
-       // CC = PlayerCamera.GetComponent<CameraController>();
     }
 
     protected override void UpdateHUD()
@@ -114,27 +112,9 @@ public class PWPlayerController : PlayerController {
 
     public override void Fire3(bool value)
     {
-        /*PWPawn CP = (PWPawn)PossesedPawn;
-        if (CP)
-        {
-            CP.Fire3(value);
-        }*/
         if (value)
         {
-            //ExitPanel.SetActive(!ExitPanel.activeSelf);
-
             ExitPanel.GetComponent<Canvas>().enabled = true;
-
-            /*if (ExitPanel.enabled == true)
-            {
-                Debug.Log("turn on panel");
-                ExitPanel.GetComponent<Canvas>().enabled = false;
-            }
-            else
-            {
-                Debug.Log("turn off panel");
-                ExitPanel.GetComponent<Canvas>().enabled = true;
-            }*/
         }
     }
 

@@ -109,8 +109,7 @@ public class PWChickenPawn : PWPawn
     {
         if (value)
         {
-            // Set Current Projectile to Prijectile 2
-            //currentProjectile = Projectile2;
+            
         }
     }
 
