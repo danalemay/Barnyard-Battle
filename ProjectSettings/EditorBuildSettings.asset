@@ -23,6 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/instructions.unity
     guid: dc6d572bdf510f142a4026fdbab75127
-  - enabled: 1
+  - enabled: 0
     path: Assets/scenes/ExitMenu.unity
     guid: d953da3a31e47ae4b9a976a4d83d5475

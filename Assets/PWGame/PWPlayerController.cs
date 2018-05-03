@@ -25,6 +25,14 @@ public class PWPlayerController : PlayerController {
         deaths = 3.0f;
     }
 
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     protected override void UpdateHUD()
     {
         if (!HUD && !PossesedPawn)
