@@ -22,7 +22,7 @@ public class Game : Info {
         Self = this; 
     }
 
-    public virtual GameObject RequestSpawn(Controller c, GameObject SpawnPreFab)
+    public virtual GameObject RequestSpawn(Controller c, GameObject SpawnPreFab, Transform SpawnLocation)
     {
         if (!SpawnPreFab || !c)
         {
@@ -30,9 +30,9 @@ public class Game : Info {
             return null; 
         }
         
-        Transform SpawnLocation; 
-         if (UseRandomSpawnPoint)    { SpawnLocation = GetRandomSpawnPoint(); }
-         else                        { SpawnLocation = GetNextSpawnPoint(); }
+       // Transform SpawnLocation; 
+        // if (UseRandomSpawnPoint)    { SpawnLocation = GetRandomSpawnPoint(); }
+        // else                        { SpawnLocation = GetNextSpawnPoint(); }
 
         GameObject NewPawn = Factory(SpawnPreFab, SpawnLocation.position, SpawnLocation.rotation, c); 
         if (!NewPawn)

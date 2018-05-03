@@ -10,6 +10,10 @@ public class openCharacterSelector : PWPawn {
         SceneManager.LoadScene("game");
     }
 
+    public void EndGame()
+    {
+        Application.Quit();
+    }
     void Update()
     {
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("P2Fire1"))
